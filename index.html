@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Portfolio Website</title>
+        <link rel="stylesheet" type="text/css" href="C:\Users\Admin\Desktop\New folder (2)\css\styles.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Portfolio</a>
+            <div class="menuToggle"></div>
+            <ul class="nav">
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </header>
+        <section id="home">
+            <div class="content">
+                <h2>Nguyễn Hoàng Minh</h2>
+                <p>22/02/2000</p>
+                <p>Hiện đang sinh sống tại Hà Nội</p>
+                <p>Có kinh nghiệm trong UIUX</p>
+            </div>
+            <img src="C:\Users\Admin\Desktop\New folder (2)\assets\239548588_1994761854009904_3757611259043142342_n.jpg" class="men">
+        </section>
+        <script>
+              let list = document.querySelectorAll('.nav li');
+              function active() {
+    list.forEach((item) => 
+      item.classList.remove('active'));
+    this.classList.add('active');
+  }
+  list.forEach((item) => 
+    item.addEventListener('click', active));
+
+  let menuToggle = document.querySelector('.menuToggle');
+  let header = document.querySelector('header');
+  menuToggle.onclick = function(){
+                header.classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>
